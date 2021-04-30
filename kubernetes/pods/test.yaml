@@ -6,3 +6,12 @@ spec:
   containers:
   - name: cont1
     image: nginx:alpine
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test2
+spec:
+  containers:
+  - name: cont1
+    image: nginx:alpine
