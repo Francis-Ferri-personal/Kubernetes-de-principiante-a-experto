@@ -11,7 +11,8 @@ spec:
       app: pod-label
   template:
     metadata:
-      app: pod-label
+      labels:
+        app: pod-label
     spec:
       containers:
       - name: cont1
