@@ -5,7 +5,7 @@ metadata:
   labels:
     app: rs-test
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: pod-label
@@ -21,3 +21,6 @@ spec:
       - name: cont2
         image: python:3.6-alpine
         command: ['sh', '-c', 'echo cont2 > index.html && python -m http.server 8083']
+
+
+28d6cb6c-9d00-460a-82f0-317ffa77a3d7
