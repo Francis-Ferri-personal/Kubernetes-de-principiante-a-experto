@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    kubernetes.io/change-cause: "Change port to 110"
   name: deployment-test
   labels:
     app: front
@@ -19,4 +21,4 @@ spec:
       - name: nginx
         image: nginx
         ports:
-          - containerPort: 100
+          - containerPort: 110
