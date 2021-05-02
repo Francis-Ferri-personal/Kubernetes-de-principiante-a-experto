@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: nginx:testfake
         ports:
           - containerPort: 110
