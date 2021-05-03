@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     kubernetes.io/change-cause: "Change port to 110"
-  name: deployment-test
+  name: deployment-test1
   labels:
     app: backend
 spec:
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+  name: my-service1
   labels:
     app: backend
 spec:
