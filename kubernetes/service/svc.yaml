@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:testfake
+        image: nginx:alpine
 ---
 apiVersion: v1
 kind: Service
