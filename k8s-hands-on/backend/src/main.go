@@ -13,6 +13,10 @@ type HandsOn struct {
 }
 
 func ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/" {
+		http.NotFound(w, r)
+		return
+	}
 	resp := HandsOn{
 		Time:     time.Now(),
 		Hostname: os.Getenv("HOSTNAME"),
