@@ -27,9 +27,13 @@ metadata:
   labels:
     app: backend
 spec:
+  # quitar 
+  type: NodePort 
   selector:
     app: backend
   ports:
     - protocol: TCP
       port: 80
       targetPort: 9090
+      # quitar
+      nodePort: 31500
