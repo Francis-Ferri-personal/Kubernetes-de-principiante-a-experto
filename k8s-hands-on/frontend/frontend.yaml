@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: frontend-k8s-hands-on
+        image: frontend-k8s-hands-on:v1
         imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
@@ -33,5 +33,4 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 9090
-      nodePort: 31000
+      targetPort: 80
