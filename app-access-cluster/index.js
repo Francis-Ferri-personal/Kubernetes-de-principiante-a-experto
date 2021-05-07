@@ -8,7 +8,7 @@ const targetURL = '192.168.49.2';
 const targetPort = 31000;
 
 app.get('/', function (req, res) {
-    axios.get(`http://${url}:${port}`)
+    axios.get(`http://${targetURL}:${targetPort}`)
         .then( (response) => {
             res.send(response.data)
         }
