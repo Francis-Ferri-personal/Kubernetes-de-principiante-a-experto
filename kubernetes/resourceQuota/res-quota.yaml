@@ -25,7 +25,7 @@ metadata:
   labels:
     app: front
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: front
