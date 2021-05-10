@@ -34,8 +34,8 @@ spec:
     image: nginx:alpine
     resources:
       limits:
-        memory: 2G
-        cpu: 2
+        memory: 50M
+        cpu: 50m
       requests:
-        memory: 400M
-        cpu: 0.3
+        memory: 40M
+        cpu: 40m
