@@ -32,7 +32,7 @@ spec:
   containers:
   - name: cont1
     image: nginx:alpine
-    resoruces:
+    resources:
       limits:
         memory: 500M
         cpu: 0.5
