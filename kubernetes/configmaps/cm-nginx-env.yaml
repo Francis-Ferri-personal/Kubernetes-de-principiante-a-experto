@@ -64,11 +64,11 @@ spec:
                 configMapKeyRef:
                   name: vars
                   key: db_user
-              volumeMounts:
-                - name: nginx-vol
-                  mountPath: /etc/nginx/conf.d
-                - name: script-vol
-                  mountPath: /opt
+          volumeMounts:
+            - name: nginx-vol
+              mountPath: /etc/nginx/conf.d
+            - name: script-vol
+              mountPath: /opt
       volumes:
         - name: nginx-vol
           configMap:
