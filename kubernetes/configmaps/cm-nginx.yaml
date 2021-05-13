@@ -49,7 +49,3 @@ spec:
         - name: nginx-vol
           configMap:
             name: nginx-config
-            items:
-              - key: nginx
-                # Nombre del archivo
-                path: default.conf
