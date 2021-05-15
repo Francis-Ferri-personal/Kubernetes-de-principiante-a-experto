@@ -4,11 +4,11 @@ metadata:
   name: test-pd
 spec:
   containers:
-  - image: nginx:alpine
+    - image: nginx:alpine
       name: test-container
       volumeMounts:
-      - mountPath: /var/log/nginx
-      name: vol
+        - mountPath: /var/log/nginx
+          name: vol
   volumes:
-  - name: vol
-    emptyDir: {}
+    - name: vol
+      emptyDir: {}
