@@ -1,18 +1,17 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: task-pv-volume
+  name: task-pv-volume2
   labels:
-    type: local
+    mysql: ready
 spec:
   storageClassName: manual
   capacity:
     storage: 5Gi
   accessModes:
-    # Especifica que solo puede ser usado por un pod a la vez
     - ReadWriteOnce
   hostPath:
-    path: "/test"
+    path: "/mysql"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -25,3 +24,6 @@ spec:
   resources:
     requests:
       storage: 5Gi
+  selector:
+    matchLabels:
+      mysql: ready
