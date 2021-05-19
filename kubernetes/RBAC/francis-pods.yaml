@@ -7,10 +7,10 @@ rules:
   # Esto es porque el apui group de los pods es vacio
   - apiGroups: [""] # "" indicates the core API group
     resources: ["pods"]
-    verbs: ["get", "watch", "list"]
+    verbs: ["get", "watch", "list", "create"]
   - apiGroups: ["apps"] # "" indicates the core API group
     resources: ["deployments"]
-    verbs: ["get", "watch", "list"]
+    verbs: ["get", "watch", "list", "create"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
