@@ -9,7 +9,8 @@ openssl x509 -in ricardo.crt -noout -text
 
 ## Isolated env
 kubectl config view | grep server
-docker run --rm-ti-V $PWD:/test-W /test - V /root/.minikube/ca.crt:/ca.crt -v /usr/bin/kubectl:/usr/bin/kubectl alpine sh
+docker run --rm -ti -v $PWD:/test -w /test -v /root/.minikube/ca.crt:/ca.crt -v /usr/bin/kubectl:/usr/bin/kubectl alpine sh
+
 ## Configure kubectl for user
 kubectl config set-cluster minikube --server=https://192.168.1.140:8443 --certificate-authority=/ca.crt
 kubectl config set-credentials ricardo --client-certificate=ricardo.crt --client-key=ricardo.key
