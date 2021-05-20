@@ -32,7 +32,7 @@ roleRef:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-namespace: dev
+  namespace: dev
   name: vars
   labels:
     app: front
