@@ -11,7 +11,7 @@ metadata:
   namespace: dev
   name: cm-role
 rules:
-  - apiGroups: ["apps"]
+  - apiGroups: [""]
     resources: ["configmaps"]
     verbs: ["get", "watch", "list"]
 ---
