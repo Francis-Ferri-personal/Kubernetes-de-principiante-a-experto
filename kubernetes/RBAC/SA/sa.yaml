@@ -43,7 +43,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: my-sa
-    apiGroup: rbac.authorization.k8s.io
+    apiGroup: ""
 roleRef:
   kind: Role
   name: sa-reader
