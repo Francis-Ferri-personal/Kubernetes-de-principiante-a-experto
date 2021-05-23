@@ -18,9 +18,8 @@ spec:
       containers:
         - name: nginx
           image: nginx:alpine
-          command: ["/bin/echo"]
-          args:
-            ["VERSION 1.0 desde $HOSTNAME  > /usr/share/nginx/html/index.html"]
+          command:
+            ["echo", "VERSION 1.0 $HOSTNAME > /usr/share/nginx/html/index.html"]
 ---
 apiVersion: v1
 kind: Service
