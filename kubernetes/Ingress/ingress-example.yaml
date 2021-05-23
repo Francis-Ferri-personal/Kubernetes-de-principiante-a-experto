@@ -1,9 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kubernetes.io/change-cause: "Change port to 110"
-  name: ingress-deployment
+  name: ingress-depl
   labels:
     app: front
 spec:
@@ -22,8 +20,6 @@ spec:
           image: nginx:alpine
           command:
             [
-              "sh",
-              "-c",
               "echo VERSION 1.0 desde $HOSTNAME > /usr/share/nginx/html/index.html"
             ]
 ---
