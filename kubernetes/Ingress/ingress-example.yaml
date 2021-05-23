@@ -28,10 +28,6 @@ spec:
       containers:
         - name: nginx
           image: nginx:alpine
-          command:
-            [
-              "envsubst < /nginx-data/index.html > /usr/share/nginx/html/index.html"
-            ]
           volumeMounts:
             - name: nginx-vol
               # Solo carpetas no archivps
