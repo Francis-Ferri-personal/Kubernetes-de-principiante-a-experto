@@ -17,9 +17,9 @@ spec:
       containers:
         - name: nginx
           image: nginx:alpine
-          command:
+          command: ["/bin/sh"]
+          args:
             [
-              "sh",
               "-c",
               "envsubst < VERSION 1.0 $HOSTNAME > /usr/share/nginx/html/index.html"
             ]
