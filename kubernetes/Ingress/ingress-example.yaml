@@ -22,7 +22,7 @@ spec:
           args:
             [
               "-c",
-              "echo VERSION 1.0 desde $HOSTNAME > /usr/share/nginx/html/index.html"
+              "echo 'VERSION 1.0 desde $HOSTNAME' > /usr/share/nginx/html/index.html"
             ]
 ---
 apiVersion: v1
