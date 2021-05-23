@@ -6,7 +6,6 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
   name: test
   labels:
     app: front
