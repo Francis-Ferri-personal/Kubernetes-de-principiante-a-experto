@@ -30,13 +30,6 @@ spec:
             - name: nginx-vol
               # Solo carpetas no archivps
               mountPath: /usr/share/nginx/html
-          command: ["/bin/sed"]
-          args:
-            [
-              "-i",
-              "-e",
-              '"s/HOSTNAME/$HOSTNAME/g" /usr/share/nginx/html/index.html'
-            ]
       volumes:
         - name: nginx-vol
           configMap:
