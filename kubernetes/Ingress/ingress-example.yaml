@@ -32,6 +32,12 @@ spec:
             - name: nginx-vol
               # Solo carpetas no archivps
               mountPath: /nginx-data
+          command: ["/bin/sh"]
+          args:
+            [
+              "-c",
+              "envsubst < /nginx-data/index.html > /usr/share/nginx/html/index.html"
+            ]
       volumes:
         - name: nginx-vol
           configMap:
