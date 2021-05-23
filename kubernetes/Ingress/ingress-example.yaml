@@ -17,11 +17,11 @@ spec:
       containers:
         - name: nginx
           image: nginx:alpine
-          command: ["/bin/sh"]
-          args:
+          command:
             [
+              "sh",
               "-c",
-              "envsubst < VERSION 1.0 $HOSTNAME > /usr/share/nginx/html/index.html"
+              "echo VERSION 1.0 $HOSTNAME > /usr/share/nginx/html/index.html"
             ]
 ---
 apiVersion: v1
