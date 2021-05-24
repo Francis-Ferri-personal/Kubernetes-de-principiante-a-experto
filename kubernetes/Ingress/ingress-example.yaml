@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: ingress-depl
   labels:
-    app: front
+    app: backend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: front
+      app: backend
   template:
     metadata:
       labels:
-        app: front
+        app: backend
     spec:
       containers:
         - name: nginx
@@ -29,11 +29,11 @@ kind: Service
 metadata:
   name: app-v1
   labels:
-    app: front
+    app: backend
 spec:
   type: ClusterIP
   selector:
-    app: front
+    app: backend
   ports:
     - protocol: TCP
       port: 8080
