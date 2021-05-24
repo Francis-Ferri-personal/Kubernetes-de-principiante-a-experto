@@ -6,6 +6,16 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
+    - host: "app1.mydomain.com"
+        http:
+          paths:
+            - pathType: Prefix
+              path: "/"
+              backend:
+                service:
+                  name: app-v1
+                  port:
+                    number: 8080
     - http:
         paths:
           - path: /test
